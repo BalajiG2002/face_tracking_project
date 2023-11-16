@@ -1,0 +1,18 @@
+<!-- face_tracking_app/templates/face_tracking_app/detection_results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detected Faces</title>
+</head>
+<body>
+    <h1>Detected Faces</h1>
+    {% for face in detected_faces %}
+        <p>
+            Timestamp: {{ face.timestamp }}<br>
+            Name: {{ face.name }}<br>
+            Position: ({{ face.x_position }}, {{ face.y_position }})<br>
+            Size: ({{ face.width }}, {{ face.height }})
+        </p>
+    {% endfor %}
+</body>
+</html>
